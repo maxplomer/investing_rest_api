@@ -1,5 +1,5 @@
 module Main
-  class TradesController < Volt::ModelController
+  class TradesController < Volt::HttpController
     def index
       data = { some: "data" }
       render json: data
