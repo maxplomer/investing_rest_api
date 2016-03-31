@@ -1,7 +1,7 @@
 module Main
   class TradesController < Volt::HttpController
     def index
-      data = { some: "data" }
+      data = store._trades.all
       render json: data
     end
   end
