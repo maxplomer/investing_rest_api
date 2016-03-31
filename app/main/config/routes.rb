@@ -1,6 +1,7 @@
 # See https://github.com/voltrb/volt#routes for more info on routes
 
 get "/api/trades", controller: 'trades', action: 'index'
+post "/api/trades", controller: 'trades', action: 'create'
 
 client '/about', action: 'about'
 

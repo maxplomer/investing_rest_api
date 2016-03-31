@@ -4,5 +4,11 @@ module Main
       data = store._trades.all
       render json: data
     end
+
+    def create
+      data = {company: params._company, shares: params._shares}
+      store._trades << data
+      render json: data
+    end
   end
 end
