@@ -9,6 +9,10 @@ Be sure to read the volt docs at http://voltframework.com/docs
 
 POST to
 
-localhost:3000/api/trades?company=AAPL&shares=5
+    localhost:3000/api/trades?company=AAPL&shares=5
 
 
+
+## Run with 
+
+    $ bundle exec volt server -p 3001
