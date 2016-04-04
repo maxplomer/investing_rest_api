@@ -6,7 +6,7 @@ module Main
     end
 
     def create
-      data = {company: params._company, shares: params._shares}
+      data = {company: params._company, shares: params._shares.to_i}
       store._trades << data
       render json: data
     end
