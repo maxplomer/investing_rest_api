@@ -1,8 +1,16 @@
 module Main
   class TradesController < Volt::HttpController
     def index
-      data = store._trades.all
-      render json: data
+      # Only want the 10 most recent
+      store._trades.length.then do |trades_length|
+        if trades_length > 10
+          data = store._trades.skip(trades_length - 10).limit(10).all
+        else
+          data = store._trades.all
+        end
+
+        render json: data
+      end
     end
 
     def create
