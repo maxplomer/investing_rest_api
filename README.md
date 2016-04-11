@@ -1,7 +1,6 @@
-# Place your app's docs here.
+# Ruby Investing Rest API
 
-## New to Volt?
-Be sure to read the volt docs at http://voltframework.com/docs
+This is the backend for the Angular 2 app.
 
 
 
