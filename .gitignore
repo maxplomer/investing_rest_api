@@ -7,5 +7,5 @@ tmp
 .sass-cache
 .DS_Store
 compiled
-.env
+*.env
 *.pem

@@ -14,4 +14,11 @@ POST to
 
 ## Run with 
 
-    $ bundle exec volt server -p 3001
+    $ ruby serve.rb
+
+
+
+##  Sample .env file
+
+    COMPOSEIO_URI='mongodb://db_user:db_password@candidate.52.mongolayer.com:10794/investing_rest_api'
+    ACCESS_CONTROL_ALLOW_ORIGIN='http://localhost:3000'
