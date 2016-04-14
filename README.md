@@ -26,6 +26,10 @@ POST to
 
 # Deployment
 
+Deploy with
+
+    $ ruby deploy.rb
+
 ## Directions to create new EC2 Instance (add to README.md)
 
 ## Create Amazon Linux AMI instance
