@@ -61,6 +61,7 @@ GEM
     mongo (2.1.2)
       bson (~> 3.0)
     multi_json (1.11.2)
+    net-ssh (3.0.2)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     opal (0.8.1)
@@ -169,6 +170,7 @@ DEPENDENCIES
   dotenv
   image_optim
   image_optim_pack
+  net-ssh
   opal-rspec (~> 0.4.2)
   poltergeist (~> 1.6.0)
   rbnacl
