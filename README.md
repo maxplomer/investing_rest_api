@@ -43,10 +43,19 @@ SSH into instance and update to get latest version of AWS CLI
 
 ## How to install ruby on instance 
 
-    [still to come]
+Install new Ruby on Ubuntu
 
-    - install bundler
+    $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+    $ curl -L https://get.rvm.io | bash -s stable
+    $ source ~/.rvm/scripts/rvm
+    $ rvm install 2.2.2
+    $ rvm use 2.2.2 --default
+    $ ruby -v
 
+Install newest bundler 
+
+    $ gem install bundler --pre
+  
 
 ## Install AWS CLI on your machine (mac osx). Install pip first.
 
