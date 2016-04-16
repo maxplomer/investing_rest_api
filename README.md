@@ -45,6 +45,8 @@ SSH into instance and update to get latest version of AWS CLI
 
     [still to come]
 
+    - install bundler
+
 
 ## Install AWS CLI on your machine (mac osx). Install pip first.
 

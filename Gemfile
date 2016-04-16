@@ -5,6 +5,7 @@ gem 'volt', '0.9.6'
 gem 'dotenv'
 
 gem 'net-ssh'
+gem 'net-scp'
 
 # volt uses mongo as the default data store.
 gem 'volt-mongo', '~> 0.1.0'

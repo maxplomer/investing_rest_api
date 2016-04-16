@@ -9,3 +9,4 @@ tmp
 compiled
 *.env
 *.pem
+investing_rest_api_aws/
