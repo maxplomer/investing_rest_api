@@ -1,5 +1,7 @@
 # app.rb is used to configure your app.  This code is only run on the server,
 # then any config options in config.public are passed to the client as well.
+require 'dotenv'
+Dotenv.load
 
 Volt.configure do |config|
   # Setup your global app config here.
