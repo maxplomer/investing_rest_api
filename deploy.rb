@@ -29,6 +29,11 @@ Net::SCP.start(host, username, :keys => keys) do |scp|
 end
 
 # SSH in, bundle install and run server
-`ssh -i #{ keys } #{ username }@#{ host } 'cd #{ remote_folder }; export PATH=/home/ec2-user/.rvm/gems/ruby-2.2.2/bin:/home/ec2-user/.rvm/gems/ruby-2.2.2@global/bin:/home/ec2-user/.rvm/rubies/ruby-2.2.2/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/aws/bin:/home/ec2-user/.rvm/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin; gem install bundler; chmod u+x serve_nohup.sh; ./serve_nohup.sh'`
+Net::SSH.start(host, username, :keys => keys) do |ssh|
+  cmd  = "export PATH=/home/ec2-user/.rvm/gems/ruby-2.2.2/bin:/home/ec2-user/.rvm/gems/ruby-2.2.2@global/bin:/home/ec2-user/.rvm/rubies/ruby-2.2.2/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/aws/bin:/home/ec2-user/.rvm/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin; "
+  cmd += "cd #{ remote_folder }; gem install bundler; chmod u+x serve_nohup.sh; ./serve_nohup.sh"
+
+  ssh.exec cmd 
+end
 
 `rm -rf #{ remote_folder }`
