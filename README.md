@@ -24,13 +24,15 @@ POST to
     ACCESS_CONTROL_ALLOW_ORIGIN='http://localhost:3000'
 
 
-# Deployment
+# Deployment using SCP
 
 Deploy with
 
     $ ruby deploy.rb
 
-## Directions to create new EC2 Instance (add to README.md)
+## Directions to create new EC2 Instance
+
+Log into dashboard go to ec2, go to new instance, then click Amazon Linux AMI
 
 ## Create Amazon Linux AMI instance
 
@@ -82,4 +84,16 @@ I am using "us-west-2" for Default region name, when my instance had the Availab
 ## Reboot instance with 
 
     $ aws ec2 reboot-instances --instance-ids i-f4e6bc2c
+
+# Deployment using Dokku ( http://dokku.viewdocs.io/dokku/ )
+
+Deploy with
+
+    $ git push dokku master
+
+## Create Amazon Linux AMI instance
+
+In security settings add rule for http.
+
+
 
