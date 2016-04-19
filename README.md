@@ -104,6 +104,23 @@ In security settings add rule for http.
 Go to your server's IP and follow the web installer
 
 
+SSH in and create new dokku app
+
+    # on your dokku host
+    $ dokku apps:create investing_rest_api
+
+
+Setup SSH key 
+
+    $ cat ~/.ssh/github_rsa.pub | ssh -i investing_rest_api.pem ubuntu@54.186.85.251 "sudo sshcommand acl-add dokku [description]"
+
+Deploy the dokku app
+
+
+    # from your local machine
+    $ git remote add dokku dokku@54.186.85.251:investing_rest_api
+    $ git push dokku master
+
 
 
 
