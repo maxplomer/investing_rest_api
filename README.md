@@ -91,9 +91,19 @@ Deploy with
 
     $ git push dokku master
 
-## Create Amazon Linux AMI instance
+## Create Ubuntu Server 14.x instance (must have apt-get!)
 
 In security settings add rule for http.
+
+
+## Install dokku
+    $ ssh -i investing_rest_api.pem ubuntu@54.186.85.251
+    $ wget https://raw.githubusercontent.com/dokku/dokku/v0.5.5/bootstrap.sh
+    $ sudo DOKKU_TAG=v0.5.5 bash bootstrap.sh
+
+Go to your server's IP and follow the web installer
+
+
 
 
 
