@@ -121,6 +121,14 @@ Deploy the dokku app
     $ git remote add dokku dokku@54.186.85.251:investing_rest_api
     $ git push dokku master
 
+Configure Environment variables (dotenv Ruby gem doesn't work in dokku)
 
+    # on your dokku host
+    $ dokku config:set investing_rest_api PLATFORM='dokku' COMPOSEIO_URI='mongodb://investing_rest_api_db_user:db_password@candidate.53.mongolayer.com:10833,candidate.52.mongolayer.com:10794/investing_rest_api' ACCESS_CONTROL_ALLOW_ORIGIN='http://maxplomer.github.io'
+
+Applications URL
+
+    =====> Application deployed:
+           http://54.186.85.251:24413 (nginx)
 
 
