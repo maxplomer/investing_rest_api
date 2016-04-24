@@ -1,7 +1,13 @@
 module Main
   class UsersController < Volt::HttpController
     def create
-      data = {hello: 'world'}
+      body = JSON.parse(request.body.read)
+      email = body["email"]
+      password = body["password"]
+      p email
+      p password
+
+      data = {id_token: '12345678'}
       render json: data
     end
 
