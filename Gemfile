@@ -4,6 +4,7 @@ ruby '2.2.2' # specify a Ruby version
 
 gem 'volt', '0.9.6'
 
+gem 'auth0'
 gem 'dotenv'
 
 gem 'net-ssh'

@@ -3,6 +3,8 @@
 get "/api/trades", controller: 'trades', action: 'index'
 post "/api/trades", controller: 'trades', action: 'create'
 
+post "/api/users", controller: 'users', action: 'create'
+
 # client '/about', action: 'about'
 
 # Routes for login and signup, provided by user_templates component gem
