@@ -14,7 +14,8 @@ module Main
     end
 
     def create
-      data = {company: params._company, shares: params._shares.to_i}
+      body = JSON.parse(request.body.read)
+      data = {company: body["company"], shares: body["shares"].to_i}
       store._trades << data
       render json: data
     end
