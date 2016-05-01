@@ -124,7 +124,7 @@ Deploy the dokku app
 Configure Environment variables (dotenv Ruby gem doesn't work in dokku)
 
     # on your dokku host
-    $ dokku config:set investing_rest_api PLATFORM='dokku' COMPOSEIO_URI='mongodb://investing_rest_api_db_user:db_password@candidate.53.mongolayer.com:10833,candidate.52.mongolayer.com:10794/investing_rest_api' ACCESS_CONTROL_ALLOW_ORIGIN='http://maxplomer.github.io'
+    $ dokku config:set investing_rest_api PLATFORM='dokku' COMPOSEIO_URI='mongodb://investing_rest_api_db_user:db_password@candidate.53.mongolayer.com:10833,candidate.52.mongolayer.com:10794/investing_rest_api' ACCESS_CONTROL_ALLOW_ORIGIN='http://maxplomer.github.io' AUTH0_DOMAIN='maxplomer.auth0.com'
 
 Applications URL
 
