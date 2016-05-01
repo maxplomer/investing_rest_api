@@ -29,7 +29,11 @@ module Main
 
       auth0.user(user_id)
 
-      data = {company: body["company"], shares: body["shares"].to_i}
+      data = {
+        company: body["company"], 
+        shares: body["shares"].to_i,
+        user_id: user_id
+      }
       store._trades << data
       render json: data
     end
