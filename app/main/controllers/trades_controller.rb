@@ -1,3 +1,5 @@
+require "auth0"
+
 module Main
   class TradesController < Volt::HttpController
     def index
@@ -15,6 +17,18 @@ module Main
 
     def create
       body = JSON.parse(request.body.read)
+      id_token = body["idToken"]
+      user_id = body["id"]
+
+      # Check if user to be acted on matches subject in bearer token
+      auth0 = Auth0Client.new(
+        :api_version => 2,
+        :token => id_token,
+        :domain => ENV["AUTH0_DOMAIN"]
+      )
+
+      auth0.user(user_id)
+
       data = {company: body["company"], shares: body["shares"].to_i}
       store._trades << data
       render json: data
