@@ -3,8 +3,6 @@
 get "/api/trades", controller: 'trades', action: 'index'
 post "/api/trades", controller: 'trades', action: 'create'
 
-options "/api/trades", controller: 'trades', action: 'cors_check'
-
 post "/api/users", controller: 'users', action: 'create'
 
 # client '/about', action: 'about'

@@ -5,31 +5,6 @@ if ENV['PLATFORM'] != 'dokku'
   Dotenv.load
 end
 
-module Volt
-  class Routes
-    def initialize
-      # Paths where there are no bindings (an optimization)
-      @direct_routes   = {}
-
-      # Paths with bindings
-      @indirect_routes = {}
-
-      # Matcher for going from params to url
-      @param_matches   = {}
-
-      [:client, :get, :post, :put, :patch, :delete, :options].each do |method|
-        @direct_routes[method] = {}
-        @indirect_routes[method] = {}
-        @param_matches[method] = []
-      end
-    end
-
-    def options(path, params)
-      create_route(:options, path, params)
-    end
-  end
-end
-
 Volt.configure do |config|
   # Setup your global app config here.
 

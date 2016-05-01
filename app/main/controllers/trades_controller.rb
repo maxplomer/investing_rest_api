@@ -20,11 +20,6 @@ module Main
       render json: data
     end
 
-    def cors_check
-      p "HELLOWORLD"
-      render json: {success: true}
-    end
-
     private
 
     # Overwrite head method to allow api calls from different origins
