@@ -48,7 +48,8 @@ module Main
         store._trades << data
         render json: data
       end.fail do |error|
-        puts "Error: #{error}"
+        data = {error: error}
+        render json: data
       end
     end
 
