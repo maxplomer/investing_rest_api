@@ -15,6 +15,22 @@ module Main
       end
     end
 
+    def my_trades
+      id_token = params._idToken
+      user_id = params._id
+
+      # Only want the 10 most recent
+      store._trades.where(user_id: user_id).length.then do |trades_length|
+        if trades_length > 10
+          data = store._trades.where(user_id: user_id).skip(trades_length - 10).limit(10).all
+        else
+          data = store._trades.where(user_id: user_id).all
+        end
+
+        render json: data
+      end
+    end
+
     def create
       body = JSON.parse(request.body.read)
       id_token = body["idToken"]

@@ -2,8 +2,7 @@
 
 get "/api/trades", controller: 'trades', action: 'index'
 post "/api/trades", controller: 'trades', action: 'create'
-
-post "/api/users", controller: 'users', action: 'create'
+get "/api/my_trades", controller: 'trades', action: 'my_trades'
 
 # client '/about', action: 'about'
 
